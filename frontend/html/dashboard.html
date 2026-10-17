@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - CongoVital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../photos/logo.jpg" alt="Logo CongoVital" width="100px" height="85px">
+            <h1>CongoVital</h1>
+        </div>
+        <nav class="navi">
+            <ul>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./prevention.html">Prévention</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./abonne.html">Abonné</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <!-- Sidebar de Navigation -->
+        <aside class="dashboard-sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">JD</div>
+                <h3>Jean Dupont</h3>
+                <p>Patient</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-section="overview">📊 Aperçu</a></li>
+                    <li><a href="#" class="nav-link" data-section="appointments">📅 Rendez-vous</a></li>
+                    <li><a href="#" class="nav-link" data-section="medical-history">📋 Historique Médical</a></li>
+                    <li><a href="#" class="nav-link" data-section="prescriptions">💊 Prescriptions</a></li>
+                    <li><a href="#" class="nav-link" data-section="health-records">📊 Dossier Médical</a></li>
+                    <li><a href="#" class="nav-link" data-section="messages">💬 Messages</a></li>
+                    <li><a href="#" class="nav-link" data-section="settings">⚙️ Paramètres</a></li>
+                    <li><a href="#" class="nav-link logout">🚪 Déconnexion</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenu Principal -->
+        <div class="dashboard-content">
+            <!-- Section Aperçu -->
+            <section id="overview" class="dashboard-section active">
+                <h1>Bienvenue, Jean Dupont</h1>
+                
+                <div class="dashboard-grid">
+                    <!-- Carte Rendez-vous Prochain -->
+                    <div class="dashboard-card appointment-card">
+                        <h3>📅 Prochain Rendez-vous</h3>
+                        <div class="card-content">
+                            <p class="appointment-date">Jeudi 15 Mai 2026</p>
+                            <p class="appointment-time">10:00 AM</p>
+                            <p class="appointment-doctor">Dr. Jean Smith</p>
+                            <p class="appointment-service">Consultation générale</p>
+                            <a href="#" class="btn btn-small">Modifier</a>
+                        </div>
+                    </div>
+
+                    <!-- Carte Santé -->
+                    <div class="dashboard-card health-card">
+                        <h3>❤️ Votre Santé</h3>
+                        <div class="card-content">
+                            <div class="health-metric">
+                                <span>Tension Artérielle</span>
+                                <strong>120/80 mmHg</strong>
+                            </div>
+                            <div class="health-metric">
+                                <span>Poids</span>
+                                <strong>75 kg</strong>
+                            </div>
+                            <div class="health-metric">
+                                <span>IMC</span>
+                                <strong>24.5 (Normal)</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte Prescriptions -->
+                    <div class="dashboard-card prescriptions-card">
+                        <h3>💊 Prescriptions Actives</h3>
+                        <div class="card-content">
+                            <ul class="prescriptions-list">
+                                <li>
+                                    <strong>Paracétamol</strong>
+                                    <span>500mg - 2x par jour</span>
+                                </li>
+                                <li>
+                                    <strong>Vitamine C</strong>
+                                    <span>1000mg - 1x par jour</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-small">Voir toutes</a>
+                        </div>
+                    </div>
+
+                    <!-- Carte Messages -->
+                    <div class="dashboard-card messages-card">
+                        <h3>💬 Messages</h3>
+                        <div class="card-content">
+                            <p class="message-count">Vous avez <strong>2</strong> nouveaux messages</p>
+                            <div class="recent-message">
+                                <p class="sender">Dr. Marie Johnson</p>
+                                <p class="preview">Vos résultats d'analyse sont prêts...</p>
+                            </div>
+                            <a href="#" class="btn btn-small">Voir les messages</a>
+                        </div>
+                    </div>
+
+                    <!-- Carte Actions Rapides -->
+                    <div class="dashboard-card actions-card">
+                        <h3>⚡ Actions Rapides</h3>
+                        <div class="card-content">
+                            <a href="./appointment.html" class="btn btn-small">Nouveau Rendez-vous</a>
+                            <a href="./contact.html" class="btn btn-small">Contacter un Médecin</a>
+                            <a href="./prevention.html" class="btn btn-small">Conseils de Santé</a>
+                        </div>
+                    </div>
+
+                    <!-- Carte Rappels -->
+                    <div class="dashboard-card reminders-card">
+                        <h3>🔔 Rappels</h3>
+                        <div class="card-content">
+                            <ul class="reminders-list">
+                                <li>✓ Vaccination annuelle prévue</li>
+                                <li>✓ Bilan de santé à faire</li>
+                                <li>✓ Renouvellement prescription</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Rendez-vous -->
+            <section id="appointments" class="dashboard-section">
+                <h2>Vos Rendez-vous</h2>
+                
+                <div class="appointments-container">
+                    <div class="appointments-tabs">
+                        <button class="tab-btn active" data-tab="upcoming">À Venir</button>
+                        <button class="tab-btn" data-tab="past">Passés</button>
+                        <button class="tab-btn" data-tab="cancelled">Annulés</button>
+                    </div>
+
+                    <div class="appointments-list">
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h3>Consultation générale</h3>
+                                <p>Dr. Jean Smith</p>
+                                <p>Jeudi 15 Mai 2026 - 10:00 AM</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <a href="#" class="btn btn-small">Modifier</a>
+                                <a href="#" class="btn btn-small btn-danger">Annuler</a>
+                            </div>
+                        </div>
+
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h3>Vaccination</h3>
+                                <p>Dr. Marie Johnson</p>
+                                <p>Lundi 19 Mai 2026 - 14:30</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <a href="#" class="btn btn-small">Modifier</a>
+                                <a href="#" class="btn btn-small btn-danger">Annuler</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="new-appointment-btn">
+                    <a href="./appointment.html" class="btn">Prendre un Nouveau Rendez-vous</a>
+                </div>
+            </section>
+
+            <!-- Section Historique Médical -->
+            <section id="medical-history" class="dashboard-section">
+                <h2>Historique Médical</h2>
+                
+                <div class="medical-history-container">
+                    <div class="history-item">
+                        <h3>Consultation Générale</h3>
+                        <p class="date">10 Mai 2026</p>
+                        <p class="doctor">Dr. Jean Smith</p>
+                        <p class="notes">Suivi de routine. Tension artérielle normale. Pas de problèmes détectés.</p>
+                        <a href="#" class="btn btn-small">Voir les détails</a>
+                    </div>
+
+                    <div class="history-item">
+                        <h3>Vaccination</h3>
+                        <p class="date">5 Mai 2026</p>
+                        <p class="doctor">Dr. Marie Johnson</p>
+                        <p class="notes">Vaccination contre la grippe administrée avec succès.</p>
+                        <a href="#" class="btn btn-small">Voir les détails</a>
+                    </div>
+
+                    <div class="history-item">
+                        <h3>Analyse Sanguine</h3>
+                        <p class="date">1 Mai 2026</p>
+                        <p class="doctor">Laboratoire CongoVital</p>
+                        <p class="notes">Résultats normaux. Tous les paramètres dans les normes.</p>
+                        <a href="#" class="btn btn-small">Voir les résultats</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Prescriptions -->
+            <section id="prescriptions" class="dashboard-section">
+                <h2>Vos Prescriptions</h2>
+                
+                <div class="prescriptions-container">
+                    <div class="prescription-item">
+                        <h3>Paracétamol</h3>
+                        <p><strong>Dosage :</strong> 500mg</p>
+                        <p><strong>Fréquence :</strong> 2 fois par jour</p>
+                        <p><strong>Durée :</strong> 7 jours</p>
+                        <p><strong>Prescrit par :</strong> Dr. Jean Smith</p>
+                        <p class="date">Prescrit le 10 Mai 2026</p>
+                    </div>
+
+                    <div class="prescription-item">
+                        <h3>Vitamine C</h3>
+                        <p><strong>Dosage :</strong> 1000mg</p>
+                        <p><strong>Fréquence :</strong> 1 fois par jour</p>
+                        <p><strong>Durée :</strong> 30 jours</p>
+                        <p><strong>Prescrit par :</strong> Dr. Marie Johnson</p>
+                        <p class="date">Prescrit le 5 Mai 2026</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Dossier Médical -->
+            <section id="health-records" class="dashboard-section">
+                <h2>Votre Dossier Médical</h2>
+                
+                <div class="health-records-container">
+                    <div class="record-section">
+                        <h3>Informations Personnelles</h3>
+                        <p><strong>Nom :</strong> Jean Dupont</p>
+                        <p><strong>Date de Naissance :</strong> 15 Janvier 1990</p>
+                        <p><strong>Genre :</strong> Homme</p>
+                        <p><strong>Groupe Sanguin :</strong> O+</p>
+                    </div>
+
+                    <div class="record-section">
+                        <h3>Allergies</h3>
+                        <p>Aucune allergie connue</p>
+                    </div>
+
+                    <div class="record-section">
+                        <h3>Antécédents Médicaux</h3>
+                        <ul>
+                            <li>Aucun problème majeur</li>
+                            <li>Hypertension légère (contrôlée)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Messages -->
+            <section id="messages" class="dashboard-section">
+                <h2>Vos Messages</h2>
+                
+                <div class="messages-container">
+                    <div class="message-item">
+                        <div class="message-header">
+                            <h3>Dr. Marie Johnson</h3>
+                            <span class="message-date">12 Mai 2026</span>
+                        </div>
+                        <p class="message-content">Vos résultats d'analyse sont prêts. Veuillez passer les récupérer ou nous contacter pour une consultation.</p>
+                        <a href="#" class="btn btn-small">Répondre</a>
+                    </div>
+
+                    <div class="message-item">
+                        <div class="message-header">
+                            <h3>Système CongoVital</h3>
+                            <span class="message-date">10 Mai 2026</span>
+                        </div>
+                        <p class="message-content">Rappel : Votre rendez-vous est prévu demain à 10:00 AM avec Dr. Jean Smith.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Paramètres -->
+            <section id="settings" class="dashboard-section">
+                <h2>Paramètres du Compte</h2>
+                
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3>Informations de Compte</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="jean.dupont@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" value="+243 99 123 4567">
+                            </div>
+                            <button type="submit" class="btn">Mettre à jour</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Changer le Mot de Passe</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="current-password">Mot de passe actuel</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">Nouveau mot de passe</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirmer le mot de passe</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                            <button type="submit" class="btn">Changer le mot de passe</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Préférences de Notification</h3>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="email-notifications" checked>
+                            <label for="email-notifications">Recevoir les notifications par email</label>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="sms-notifications" checked>
+                            <label for="sms-notifications">Recevoir les notifications par SMS</label>
+                        </div>
+                        <button type="submit" class="btn">Enregistrer les préférences</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CongoVital. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

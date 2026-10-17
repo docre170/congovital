@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prise de Rendez-vous - CongoVital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/appointment.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../photos/logo.jpg" alt="Logo CongoVital" width="100px" height="85px">
+            <h1>CongoVital</h1>
+        </div>
+        <nav class="navi">
+            <ul>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./prevention.html">Prévention</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./abonne.html">Abonné</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="appointment-page">
+        <!-- Section Hero -->
+        <section class="appointment-hero">
+            <h1>Prendre un Rendez-vous</h1>
+            <p>Réservez facilement une consultation avec nos professionnels de santé</p>
+        </section>
+
+        <!-- Section Formulaire -->
+        <section class="appointment-form-section">
+            <div class="form-container">
+                <h2>Formulaire de Réservation</h2>
+                
+                <form class="appointment-form" action="" method="POST">
+                    <!-- Étape 1: Informations Personnelles -->
+                    <fieldset class="form-step" id="step-1">
+                        <legend>Vos Informations</legend>
+                        
+                        <div class="form-group">
+                            <label for="first-name">Prénom *</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Nom *</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Votre nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+243 XX XXX XXXX" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date-of-birth">Date de Naissance</label>
+                            <input type="date" id="date-of-birth" name="date-of-birth">
+                        </div>
+                    </fieldset>
+
+                    <!-- Étape 2: Type de Consultation -->
+                    <fieldset class="form-step" id="step-2">
+                        <legend>Type de Consultation</legend>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Demandé *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Sélectionnez un service --</option>
+                                <option value="consultation">Consultation générale</option>
+                                <option value="pediatrie">Pédiatrie</option>
+                                <option value="pharmacie">Pharmacie</option>
+                                <option value="vaccination">Vaccination</option>
+                                <option value="maternite">Maternité</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctor">Médecin Préféré (Optionnel)</label>
+                            <select id="doctor" name="doctor">
+                                <option value="">-- Sélectionnez un médecin --</option>
+                                <option value="dr-smith">Dr. Jean Smith</option>
+                                <option value="dr-johnson">Dr. Marie Johnson</option>
+                                <option value="dr-williams">Dr. Pierre Williams</option>
+                                <option value="any">N'importe quel médecin disponible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason">Motif de la Consultation *</label>
+                            <textarea id="reason" name="reason" placeholder="Décrivez brièvement le motif de votre visite" rows="4" required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Étape 3: Date et Heure -->
+                    <fieldset class="form-step" id="step-3">
+                        <legend>Date et Heure</legend>
+                        
+                        <div class="form-group">
+                            <label for="appointment-date">Date Souhaitée *</label>
+                            <input type="date" id="appointment-date" name="appointment-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-time">Heure Souhaitée *</label>
+                            <select id="appointment-time" name="appointment-time" required>
+                                <option value="">-- Sélectionnez une heure --</option>
+                                <option value="08:00">08:00</option>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="consultation-type">Type de Consultation *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="consultation-type" value="in-person" required>
+                                    En personne
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="consultation-type" value="online">
+                                    En ligne (si disponible)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Étape 4: Confirmation -->
+                    <fieldset class="form-step" id="step-4">
+                        <legend>Confirmation</legend>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="confirm-info" name="confirm-info" required>
+                            <label for="confirm-info">Je confirme que les informations saisies sont correctes</label>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="confirm-terms" name="confirm-terms" required>
+                            <label for="confirm-terms">J'accepte les <a href="#">conditions de rendez-vous</a></label>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="confirm-notification" name="confirm-notification">
+                            <label for="confirm-notification">Je souhaite recevoir une notification par SMS et email</label>
+                        </div>
+
+                        <div class="confirmation-summary">
+                            <h3>Résumé de votre rendez-vous</h3>
+                            <p>Veuillez vérifier les informations ci-dessus avant de confirmer votre rendez-vous.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- Boutons de Navigation -->
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-secondary" id="prev-btn" style="display:none;">Précédent</button>
+                        <button type="button" class="btn btn-primary" id="next-btn">Suivant</button>
+                        <button type="submit" class="btn btn-submit" id="submit-btn" style="display:none;">Confirmer le Rendez-vous</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sidebar avec Informations -->
+            <div class="appointment-info">
+                <h3>Informations Utiles</h3>
+                
+                <div class="info-box">
+                    <h4>📅 Horaires de Consultation</h4>
+                    <ul>
+                        <li>Lundi - Vendredi : 08h00 - 18h00</li>
+                        <li>Samedi : 09h00 - 14h00</li>
+                        <li>Dimanche : Fermé</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>💡 Conseils</h4>
+                    <ul>
+                        <li>Arrivez 10 minutes avant votre rendez-vous</li>
+                        <li>Apportez votre carte d'identité</li>
+                        <li>Préparez une liste de vos médicaments</li>
+                        <li>Notez vos symptômes</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Questions ?</h4>
+                    <p>Contactez-nous au <strong>+243 199 604 800</strong></p>
+                    <p>ou par email : <strong>contact@congovital.cd</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section class="appointment-faq">
+            <h2>Questions Fréquemment Posées</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Puis-je modifier mon rendez-vous ?</h3>
+                    <p>Oui, vous pouvez modifier votre rendez-vous jusqu'à 24 heures avant la consultation. Contactez-nous pour plus de détails.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Que faire si je ne peux pas venir ?</h3>
+                    <p>Veuillez annuler votre rendez-vous au moins 24 heures à l'avance pour permettre à un autre patient de prendre votre créneau.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Y a-t-il des frais de consultation ?</h3>
+                    <p>Les tarifs varient selon le type de consultation. Contactez-nous pour connaître les tarifs spécifiques.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Proposez-vous des consultations d'urgence ?</h3>
+                    <p>Oui, nous proposons des consultations d'urgence. Appelez-nous directement pour une prise en charge rapide.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CongoVital. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/appointment.js"></script>
+</body>
+</html>

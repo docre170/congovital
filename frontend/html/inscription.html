@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - CongoVital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../photos/logo.jpg" alt="Logo CongoVital" width="100px" height="85px">
+            <h1>CongoVital</h1>
+        </div>
+        <nav class="navi">
+            <ul>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./prevention.html">Prévention</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./abonne.html">Abonné</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <img src="../../photos/logo.jpg" alt="Logo CongoVital" class="auth-logo">
+                    <h1>Créer un Compte</h1>
+                    <p>Rejoignez CongoVital pour accéder à nos services de santé</p>
+                </div>
+
+                <form class="auth-form" action="" method="POST">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur *</label>
+                        <input type="text" id="username" name="username" placeholder="Choisissez un nom d'utilisateur"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullname">Nom Complet *</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Votre nom complet" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse Email *</label>
+                        <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numéro de Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+243 XX XXX XXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de Passe *</label>
+                        <input type="password" id="password" name="password"
+                            placeholder="Entrez un mot de passe sécurisé" required>
+                        <small>Minimum 8 caractères, avec majuscules et chiffres</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmer le Mot de Passe *</label>
+                        <input type="password" id="confirm-password" name="confirm-password"
+                            placeholder="Confirmez votre mot de passe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date-of-birth">Date de Naissance</label>
+                        <input type="date" id="date-of-birth" name="date-of-birth">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Genre</label>
+                        <select id="gender" name="gender">
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="male">Homme</option>
+                            <option value="female">Femme</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">J'accepte les <a href="#">conditions d'utilisation</a> et la <a
+                                href="#">politique de confidentialité</a></label>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-submit">S'inscrire</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Vous avez déjà un compte ? <a href="./abonne.html">Connectez-vous ici</a></p>
+                </div>
+            </div>
+
+            <div class="auth-benefits">
+                <h2>Avantages de CongoVital</h2>
+                <ul class="benefits-list">
+                    <li> Accès à nos services de santé</li>
+                    <li> Prise de rendez-vous en ligne</li>
+                    <li> Suivi médical personnalisé</li>
+                    <li> Conseils de santé gratuits</li>
+                    <li> Accès à nos ressources éducatives</li>
+                    <li> Notifications de santé importantes</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CongoVital. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+:root {
+    --header-bg: #639871;
+    --hero-bg: #579066;
+    --button-bg: #014F31;
+    --button-hover: #023d26;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+main.prevention-page {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    min-height: calc(100vh - 200px);
+}
+
+/* Section Hero */
+.prevention-hero {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.prevention-hero .hero-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.prevention-hero h1 {
+    font-size: 2.5em;
+    color: var(--hero-bg);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.prevention-hero p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: var(--button-bg);
+}
+
+.btn-search {
+    padding: 12px 28px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-search:hover {
+    background-color: var(--button-hover);
+}
+
+.prevention-hero .hero-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.prevention-hero img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Conseils de Prévention */
+.prevention-tips {
+    margin-bottom: 50px;
+}
+
+.prevention-tips h2 {
+    font-size: 2em;
+    color: var(--hero-bg);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--button-bg);
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tip-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.tip-card h3 {
+    font-size: 1.3em;
+    color: var(--hero-bg);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tip-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+/* Section Maladies Courantes */
+.common-diseases {
+    margin-bottom: 50px;
+}
+
+.common-diseases h2 {
+    font-size: 2em;
+    color: var(--hero-bg);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.diseases-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.disease-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.disease-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.disease-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.disease-card h3 {
+    font-size: 1.4em;
+    color: var(--hero-bg);
+    margin: 20px 20px 10px;
+    font-weight: 700;
+}
+
+.disease-card p {
+    color: #555;
+    margin: 0 20px 15px;
+    line-height: 1.6;
+}
+
+.disease-card ul {
+    list-style: none;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.disease-card li {
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.disease-card li:last-child {
+    border-bottom: none;
+}
+
+.disease-card .btn {
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Section Conseils du Jour */
+.daily-advice {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.advice-sidebar,
+.categories-sidebar {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.advice-sidebar h3,
+.categories-sidebar h3 {
+    font-size: 1.3em;
+    color: var(--hero-bg);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.advice-list,
+.categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.advice-list li,
+.categories-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.advice-list li:last-child,
+.categories-list li:last-child {
+    border-bottom: none;
+}
+
+.categories-list a {
+    color: var(--button-bg);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.categories-list a:hover {
+    color: var(--button-hover);
+}
+
+/* Section CTA */
+.cta-section {
+    background: linear-gradient(135deg, var(--hero-bg) 0%, #4a7c56 100%);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--button-bg);
+    padding: 12px 28px;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    border: 2px solid var(--button-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-primary {
+    background-color: white;
+    color: var(--hero-bg);
+    border-color: white;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main.prevention-page {
+        padding: 20px 15px;
+    }
+
+    .prevention-hero {
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .prevention-hero h1 {
+        font-size: 1.8em;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .tips-grid,
+    .diseases-container {
+        grid-template-columns: 1fr;
+    }
+
+    .prevention-tips h2,
+    .common-diseases h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-section {
+        padding: 30px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main.prevention-page {
+        padding: 15px 10px;
+    }
+
+    .prevention-hero {
+        padding: 15px;
+    }
+
+    .prevention-hero h1 {
+        font-size: 1.5em;
+    }
+
+    .prevention-hero p {
+        font-size: 1em;
+    }
+
+    .tip-icon {
+        font-size: 2em;
+    }
+
+    .tip-card h3 {
+        font-size: 1.1em;
+    }
+
+    .disease-card img {
+        height: 200px;
+    }
+
+    .cta-section {
+        padding: 20px 15px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.3em;
+    }
+}

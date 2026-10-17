@@ -14,3 +14,14 @@ server.pid
 *.eml
 /dist/
 .cache
+# configuration
+backend/config/database.php
+backend/config/config.php
+
+#fichiers systeme
+.DS_Store
+Thumbs.db
+
+#dossier 
+.vscode
+.idea
