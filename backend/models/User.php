@@ -18,6 +18,14 @@ class User
         return $user ?: null;
     }
 
+    public function findByUsername(string $username): ?array
+    {
+        $stmt = $this->db->prepare('SELECT * FROM users WHERE username = ? LIMIT 1');
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
+        return $user ?: null;
+    }
+
     public function emailExists(string $email): bool
     {
         $stmt = $this->db->prepare('SELECT id FROM users WHERE email = ? LIMIT 1');
@@ -66,9 +74,9 @@ class User
         ];
     }
 
-    public function login(string $email, string $password): array
+    public function login(string $identifier, string $password): array
     {
-        $user = $this->findByEmail($email);
+        $user = $this->findByEmail($identifier) ?? $this->findByUsername($identifier);
 
         if (!$user) {
             return ['success' => false, 'message' => 'Email ou mot de passe incorrect.'];

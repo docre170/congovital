@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             clearAlert();
 
-            const email    = document.getElementById('email').value.trim();
+            const identifier = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
 
-            if (!email || !password) {
+            if (!identifier || !password) {
                 showAlert('Veuillez remplir tous les champs.');
                 return;
             }
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const res  = await fetch(`${ENDPOINTS_BASE}/login.php`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
+                    body: JSON.stringify({ identifier, password })
                 });
                 const data = await res.json();
 
@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('user_id', data.user.id);
                     localStorage.setItem('user_role', data.user.role);
                     showAlert('Connexion réussie. Redirection...', 'success');
-                    setTimeout(() => {
-                        window.location.href = '../../dashboard.php';
-                    }, 1000);
+                    window.location.assign(new URL('../../dashboard.php', window.location.href));
                 } else {
                     showAlert(data.message || 'Identifiants incorrects.');
                 }
