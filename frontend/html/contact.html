@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - CongoVital</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/site-ui.css">
 </head>
 <body>
     <header>
@@ -19,7 +21,7 @@
                 <li><a href="../../index.html">Accueil</a></li>
                 <li><a href="./services.html">Services</a></li>
                 <li><a href="./prevention.html">Prévention</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./contact.html" aria-current="page">Contact</a></li>
                 <li><a href="./abonne.html">Abonné</a></li>
             </ul>
         </nav>
@@ -37,7 +39,10 @@
             <!-- Formulaire de Contact -->
             <div class="contact-form-section">
                 <h2>Envoyez-nous un Message</h2>
-                <form class="contact-form" action="" method="POST">
+                <form class="contact-form" action="mailto:credokutanga170@gmail.com" method="post"
+                    enctype="text/plain" data-recipient="credokutanga170@gmail.com">
+                    <p class="contact-form-note">L’envoi ouvrira un nouveau message Gmail avec vos informations.
+                        Vous pourrez le vérifier avant de l’envoyer.</p>
                     <div class="form-group">
                         <label for="name">Nom complet *</label>
                         <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
@@ -84,14 +89,12 @@
                 <h2>Nos Coordonnées</h2>
                 
                 <div class="info-card">
-
-                <div class="info-card">
-                     <h3> Téléphone</h3>
+                    <h3>Téléphone</h3>
                     <p><a href="tel:+243831996048">Appeler</a></p>
                     <p class="small">Lun-Ven : 08h00 - 18h00</p>
                 
-                    <h3> Email</h3>
-                    <p><a href="mailto:credokutanga170@gmail">contact@congovital.cd</a></p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:credokutanga170@gmail.com">credokutanga170@gmail.com</a></p>
                     <p class="small">Réponse sous 24h</p>
                 </div>
 
@@ -111,15 +114,20 @@
                 </div>
 
                 <div class="info-card social">
-                    <h3>Suivez-nous</h3>
+                    <h3>Contactez-nous en ligne</h3>
                     <div class="social-links">
-                        <a href="#" title="Facebook"></a>
-                        <a href="#" title="Twitter"></a>
-                        <a href="#" title="Instagram"></a>
-                        <a href="#" title="LinkedIn"></a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=credokutanga170%40gmail.com"
+                            target="_blank" rel="noopener noreferrer" aria-label="Écrire à CongoVital avec Gmail"
+                            title="Gmail">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/243831996048?text=Bonjour%20CongoVital%2C%20je%20vous%20contacte."
+                            target="_blank" rel="noopener noreferrer" aria-label="Contacter CongoVital sur WhatsApp"
+                            title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 
@@ -157,5 +165,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/site-ui.js"></script>
 </body>
 </html>

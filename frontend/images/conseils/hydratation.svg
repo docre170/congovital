@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Illustration d’un verre d’eau</title>
+  <rect width="640" height="360" fill="#eaf4ed"/>
+  <circle cx="520" cy="64" r="86" fill="#d9ebdf"/>
+  <circle cx="104" cy="318" r="126" fill="#d9ebdf"/>
+  <path d="M252 90h136l-16 180a24 24 0 0 1-24 22h-56a24 24 0 0 1-24-22L252 90Z" fill="#fff" stroke="#216b49" stroke-width="12" stroke-linejoin="round"/>
+  <path d="m264 192 11 77a24 24 0 0 0 24 21h56a24 24 0 0 0 24-21l7-77H264Z" fill="#91cbb2"/>
+  <path d="M290 137c15-19 36-19 51 0M314 112c8-11 19-11 27 0" fill="none" stroke="#43a47b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M453 208c-23 29-32 45-32 61a32 32 0 0 0 64 0c0-16-9-32-32-61Z" fill="#68b8d0"/>
+</svg>

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de Bord - CongoVital</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/site-ui.css">
 </head>
 <body>
     <header>
@@ -36,14 +38,14 @@
 
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="#" class="nav-link active" data-section="overview">📊 Aperçu</a></li>
-                    <li><a href="#" class="nav-link" data-section="appointments">📅 Rendez-vous</a></li>
-                    <li><a href="#" class="nav-link" data-section="medical-history">📋 Historique Médical</a></li>
-                    <li><a href="#" class="nav-link" data-section="prescriptions">💊 Prescriptions</a></li>
-                    <li><a href="#" class="nav-link" data-section="health-records">📊 Dossier Médical</a></li>
-                    <li><a href="#" class="nav-link" data-section="messages">💬 Messages</a></li>
-                    <li><a href="#" class="nav-link" data-section="settings">⚙️ Paramètres</a></li>
-                    <li><a href="#" class="nav-link logout">🚪 Déconnexion</a></li>
+                    <li><a href="#" class="nav-link active" data-section="overview"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Aperçu</a></li>
+                    <li><a href="#" class="nav-link" data-section="appointments"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Rendez-vous</a></li>
+                    <li><a href="#" class="nav-link" data-section="medical-history"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Historique Médical</a></li>
+                    <li><a href="#" class="nav-link" data-section="prescriptions"><i class="fa-solid fa-prescription-bottle-medical" aria-hidden="true"></i> Prescriptions</a></li>
+                    <li><a href="#" class="nav-link" data-section="health-records"><i class="fa-solid fa-file-medical" aria-hidden="true"></i> Dossier Médical</a></li>
+                    <li><a href="#" class="nav-link" data-section="messages"><i class="fa-solid fa-comment-medical" aria-hidden="true"></i> Messages</a></li>
+                    <li><a href="#" class="nav-link" data-section="settings"><i class="fa-solid fa-gear" aria-hidden="true"></i> Paramètres</a></li>
+                    <li><a href="#" class="nav-link logout"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Déconnexion</a></li>
                 </ul>
             </nav>
         </aside>
@@ -57,7 +59,7 @@
                 <div class="dashboard-grid">
                     <!-- Carte Rendez-vous Prochain -->
                     <div class="dashboard-card appointment-card">
-                        <h3>📅 Prochain Rendez-vous</h3>
+                        <h3><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Prochain Rendez-vous</h3>
                         <div class="card-content">
                             <p class="appointment-date">Jeudi 15 Mai 2026</p>
                             <p class="appointment-time">10:00 AM</p>
@@ -69,7 +71,7 @@
 
                     <!-- Carte Santé -->
                     <div class="dashboard-card health-card">
-                        <h3>❤️ Votre Santé</h3>
+                        <h3><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Votre Santé</h3>
                         <div class="card-content">
                             <div class="health-metric">
                                 <span>Tension Artérielle</span>
@@ -88,7 +90,7 @@
 
                     <!-- Carte Prescriptions -->
                     <div class="dashboard-card prescriptions-card">
-                        <h3>💊 Prescriptions Actives</h3>
+                        <h3><i class="fa-solid fa-prescription-bottle-medical" aria-hidden="true"></i> Prescriptions Actives</h3>
                         <div class="card-content">
                             <ul class="prescriptions-list">
                                 <li>
@@ -106,7 +108,7 @@
 
                     <!-- Carte Messages -->
                     <div class="dashboard-card messages-card">
-                        <h3>💬 Messages</h3>
+                        <h3><i class="fa-solid fa-comment-medical" aria-hidden="true"></i> Messages</h3>
                         <div class="card-content">
                             <p class="message-count">Vous avez <strong>2</strong> nouveaux messages</p>
                             <div class="recent-message">
@@ -119,7 +121,7 @@
 
                     <!-- Carte Actions Rapides -->
                     <div class="dashboard-card actions-card">
-                        <h3>⚡ Actions Rapides</h3>
+                        <h3><i class="fa-solid fa-bolt" aria-hidden="true"></i> Actions Rapides</h3>
                         <div class="card-content">
                             <a href="./appointment.html" class="btn btn-small">Nouveau Rendez-vous</a>
                             <a href="./contact.html" class="btn btn-small">Contacter un Médecin</a>
@@ -129,12 +131,12 @@
 
                     <!-- Carte Rappels -->
                     <div class="dashboard-card reminders-card">
-                        <h3>🔔 Rappels</h3>
+                        <h3><i class="fa-solid fa-bell" aria-hidden="true"></i> Rappels</h3>
                         <div class="card-content">
                             <ul class="reminders-list">
-                                <li>✓ Vaccination annuelle prévue</li>
-                                <li>✓ Bilan de santé à faire</li>
-                                <li>✓ Renouvellement prescription</li>
+                                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Vaccination annuelle prévue</li>
+                                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Bilan de santé à faire</li>
+                                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Renouvellement de prescription</li>
                             </ul>
                         </div>
                     </div>
@@ -354,5 +356,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../js/dashboard.js"></script>
+    <script src="../js/site-ui.js"></script>
 </body>
 </html>

@@ -88,8 +88,15 @@ main.dashboard-page {
     color: #555;
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: background-color 0.2s ease, color 0.2s ease;
     font-weight: 500;
+}
+
+.nav-link i,
+.dashboard-card h3 i {
+    width: 1.25rem;
+    margin-right: 0.4rem;
+    text-align: center;
 }
 
 .nav-link:hover {
@@ -151,12 +158,11 @@ main.dashboard-page {
     padding: 25px;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.2s ease;
     border-top: 4px solid var(--button-bg);
 }
 
 .dashboard-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -278,6 +284,12 @@ main.dashboard-page {
 
 .reminders-list li:last-child {
     border-bottom: none;
+}
+
+.reminders-list li i {
+    width: 1.25rem;
+    margin-right: 0.35rem;
+    color: var(--button-bg);
 }
 
 .btn-small {

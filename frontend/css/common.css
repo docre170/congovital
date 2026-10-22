@@ -53,11 +53,6 @@ header .logo h1 {
 
 .logo img {
     margin-right: 0;
-    transition: transform 0.3s;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
 }
 
 .navi ul {

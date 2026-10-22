@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function showAlert(message, type = 'error') {
         if (!alertBox) return;
         const cls = type === 'success' ? 'alert-success' : 'alert-error';
-        alertBox.innerHTML = `<div class="alert ${cls}">${message}</div>`;
+        const alert = document.createElement('div');
+        alert.className = `alert ${cls}`;
+        alert.textContent = message;
+        alertBox.replaceChildren(alert);
         alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
@@ -23,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             clearAlert();
 
             const email    = document.getElementById('email').value.trim();
-            const password = document.getElementById('password').value.trim();
+            const password = document.getElementById('password').value;
 
             if (!email || !password) {
                 showAlert('Veuillez remplir tous les champs.');
@@ -71,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const username = document.getElementById('username').value.trim();
             const fullname = document.getElementById('fullname').value.trim();
             const email    = document.getElementById('email').value.trim();
-            const password = document.getElementById('password').value.trim();
-            const confirm  = document.getElementById('confirm-password').value.trim();
+            const password = document.getElementById('password').value;
+            const confirm  = document.getElementById('confirm-password').value;
 
             if (!username || !fullname || !email || !password || !confirm) {
                 showAlert('Veuillez remplir tous les champs obligatoires.');
@@ -100,7 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         fullname,
                         email,
                         password,
-                        phone: document.getElementById('phone')?.value.trim() || null
+                        phone: document.getElementById('phone').value.trim() || null,
+                        date_of_birth: document.getElementById('date-of-birth').value || null,
+                        gender: document.getElementById('gender').value || null
                     })
                 });
                 const data = await res.json();

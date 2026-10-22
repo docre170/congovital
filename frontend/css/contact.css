@@ -69,6 +69,16 @@ main.contact-page {
     box-shadow: var(--shadow);
 }
 
+.contact-form-note {
+    margin: 0 0 22px;
+    padding: 12px 14px;
+    color: #34473b;
+    line-height: 1.5;
+    background: #edf5ef;
+    border-left: 3px solid var(--button-bg);
+    border-radius: 4px;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -192,13 +202,18 @@ main.contact-page {
     color: white;
     border-radius: 50%;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
 }
 
-.info-card.social a:hover {
+.info-card.social a:hover,
+.info-card.social a:focus-visible {
     background-color: var(--button-hover);
-    transform: scale(1.1);
+}
+
+.info-card.social a:focus-visible {
+    outline: 3px solid #f4ce73;
+    outline-offset: 3px;
 }
 
 .hours-list {
@@ -241,11 +256,10 @@ main.contact-page {
     padding: 25px;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.2s ease;
 }
 
 .faq-item:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -291,12 +305,11 @@ main.contact-page {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: background-color 0.2s ease;
 }
 
 .cta-section .btn:hover {
     background-color: #f0f0f0;
-    transform: translateY(-2px);
 }
 
 /* Responsive */

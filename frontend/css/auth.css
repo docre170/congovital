@@ -73,6 +73,28 @@ main.auth-page {
     gap: 20px;
 }
 
+#alert-container:empty {
+    display: none;
+}
+
+.alert {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;

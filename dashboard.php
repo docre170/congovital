@@ -175,6 +175,7 @@ $initials = getInitials($fullname);
     <title>Tableau de bord - CongoVital</title>
     <link rel="stylesheet" href="frontend/css/style.css">
     <link rel="stylesheet" href="frontend/css/dashboard.css">
+    <link rel="stylesheet" href="frontend/css/site-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -435,6 +436,7 @@ $initials = getInitials($fullname);
         </div>
     </main>
 
+    <script src="frontend/js/site-ui.js"></script>
     <script>
         // Navigation entre les sections
         document.querySelectorAll('.nav-item[data-section]').forEach(item => {

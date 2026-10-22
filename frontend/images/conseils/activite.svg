@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Illustration d’une personne en mouvement</title>
+  <rect width="640" height="360" fill="#edf4e9"/>
+  <circle cx="514" cy="76" r="92" fill="#dcebd6"/>
+  <path d="M160 287h331" stroke="#9ab99d" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="323" cy="96" r="31" fill="#286b49"/>
+  <path d="m308 140 54 41 73-10m-73 10-49 61-65-9m114-52 38 68 69 26m-156-33-13 70" fill="none" stroke="#286b49" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m211 153-34 26m72-63-29-18m241 7 32-23" fill="none" stroke="#70a983" stroke-width="10" stroke-linecap="round"/>
+</svg>

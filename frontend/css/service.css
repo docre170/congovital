@@ -48,7 +48,7 @@ button a {
     border: 2px solid var(--button-bg);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
     font-weight: 600;
 }
@@ -57,13 +57,11 @@ button a {
     background-color: var(--button-hover);
     border-color: var(--button-hover);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
     color: white;
 }
 
 .btn:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(0);
 }
 
 header {
@@ -93,10 +91,6 @@ header .logo h1 {
 }
 .logo img {
     margin-right: 0;
-    transition: transform 0.3s;
-}
-.logo img:hover {
-    transform: scale(1.05);
 }
 .navi ul {
     list-style: none;
@@ -188,14 +182,13 @@ main.page-services {
     padding: 0;
     border-radius: 14px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.2s ease;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .page-services .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
 /* Zone image : ratio uniforme, pas de déformation */
@@ -213,11 +206,6 @@ main.page-services {
     object-fit: cover;
     object-position: center;
     display: block;
-    transition: transform 0.45s ease;
-}
-
-.page-services .service-card:hover .service-card__media img {
-    transform: scale(1.06);
 }
 
 .page-services .service-card > h2 {
@@ -238,6 +226,7 @@ main.page-services {
 .page-services .service-card > .btn {
     align-self: center;
     margin: 0 24px 24px;
+    max-width: calc(100% - 48px);
 }
 
 @media (max-width: 768px) {

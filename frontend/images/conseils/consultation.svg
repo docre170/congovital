@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Illustration d’une consultation médicale</title>
+  <rect width="640" height="360" fill="#edf1f5"/>
+  <circle cx="520" cy="62" r="88" fill="#dce5ed"/>
+  <rect x="100" y="90" width="218" height="184" rx="20" fill="#fff" stroke="#7891a5" stroke-width="10"/>
+  <path d="M144 139h130m-130 45h100m-100 45h77" stroke="#b4c3ce" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="427" cy="124" r="42" fill="#6f9a82"/>
+  <path d="M346 285c6-62 34-94 81-94s75 32 81 94H346Z" fill="#286b49"/>
+  <path d="M411 202h32l-16 37-16-37Zm-2 37 18 23 18-23" fill="#fff"/>
+  <path d="M427 260v25m-12-13h24" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+</svg>

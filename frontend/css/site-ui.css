@@ -1,0 +1,508 @@
+html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+header .logo img {
+    width: 82px;
+    height: 64px;
+    padding: 5px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.navi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(12px, 2vw, 22px);
+}
+
+.navi .theme-toggle {
+    flex: 0 0 auto;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 14px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+    outline: 3px solid #f4ce73;
+    outline-offset: 3px;
+}
+
+.btn,
+.btn-submit,
+.btn-search,
+.btn-small,
+.btn-secondary,
+.new-appointment-btn .btn,
+.settings-section .btn,
+button[type="submit"] {
+    min-height: 44px;
+    border-radius: 10px;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease,
+        border-color 180ms ease, color 180ms ease;
+}
+
+.btn-primary {
+    min-height: 44px;
+    color: #fff;
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+    border-radius: 10px;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease,
+        border-color 180ms ease, color 180ms ease;
+}
+
+.btn:hover,
+.btn-submit:hover,
+.btn-search:hover,
+.btn-small:hover,
+.btn-secondary:hover,
+.new-appointment-btn .btn:hover,
+.settings-section .btn:hover,
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(20, 58, 38, 0.2);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(20, 58, 38, 0.2);
+}
+
+.btn:active,
+.btn-submit:active,
+.btn-search:active,
+.btn-small:active,
+.btn-secondary:active,
+.new-appointment-btn .btn:active,
+.settings-section .btn:active,
+button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(20, 58, 38, 0.16);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(20, 58, 38, 0.16);
+}
+
+.btn:focus-visible,
+.btn-submit:focus-visible,
+.btn-search:focus-visible,
+.btn-small:focus-visible,
+.btn-secondary:focus-visible,
+.new-appointment-btn .btn:focus-visible,
+.settings-section .btn:focus-visible,
+button[type="submit"]:focus-visible {
+    outline: 3px solid #e3b743;
+    outline-offset: 3px;
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid #e3b743;
+    outline-offset: 3px;
+}
+
+a:not(.btn):not(.theme-toggle):not(.navi a):not(.nav-link):not(.social-links a):not(.conseil-navigation a) {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+a:not(.btn):not(.theme-toggle):not(.navi a):not(.nav-link):not(.social-links a):not(.conseil-navigation a):hover {
+    text-decoration-thickness: 2px;
+}
+
+button:disabled,
+button[aria-disabled="true"],
+.btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+    box-shadow: none;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --header-bg: #0B1712;
+    --hero-bg: #4CAF72;
+    --button-bg: #4CAF72;
+    --button-hover: #62c984;
+    --white: #F2F5F2;
+    --light-gray: #14231B;
+    --dark-background: #0B1712;
+    --dark-surface: #14231B;
+    --dark-text: #F2F5F2;
+    --dark-muted: #B5C2B8;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    --topic-green: #4CAF72;
+    --topic-deep-green: #4CAF72;
+    --topic-text: #F2F5F2;
+    --topic-muted: #B5C2B8;
+    --topic-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] body {
+    color: var(--dark-text);
+    background: var(--dark-background);
+}
+
+html[data-theme="dark"] main,
+html[data-theme="dark"] main.page-services,
+html[data-theme="dark"] main.prevention-page,
+html[data-theme="dark"] main.contact-page,
+html[data-theme="dark"] main.auth-page,
+html[data-theme="dark"] main.topic-page,
+html[data-theme="dark"] main.conseil-page,
+html[data-theme="dark"] main.dashboard-page {
+    color: var(--dark-text);
+    background: var(--dark-background);
+}
+
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .topic-hero,
+html[data-theme="dark"] .topic-card,
+html[data-theme="dark"] .auth-card,
+html[data-theme="dark"] .auth-benefits,
+html[data-theme="dark"] .login-info,
+html[data-theme="dark"] .contact-form,
+html[data-theme="dark"] .info-card,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .prevention-hero,
+html[data-theme="dark"] .tip-card,
+html[data-theme="dark"] .disease-card,
+html[data-theme="dark"] .advice-sidebar,
+html[data-theme="dark"] .categories-sidebar,
+html[data-theme="dark"] .conseil-hero,
+html[data-theme="dark"] .conseil-article,
+html[data-theme="dark"] .conseil-notice,
+html[data-theme="dark"] .dashboard-sidebar,
+html[data-theme="dark"] .dashboard-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .appointment-item,
+html[data-theme="dark"] .history-item {
+    color: var(--dark-text);
+    background-color: var(--dark-surface);
+    border-color: #2d4435;
+}
+
+html[data-theme="dark"] .service-card > p,
+html[data-theme="dark"] .topic-card p,
+html[data-theme="dark"] .topic-hero p,
+html[data-theme="dark"] .auth-header p,
+html[data-theme="dark"] .form-group label,
+html[data-theme="dark"] .contact-form-note,
+html[data-theme="dark"] .info-card p,
+html[data-theme="dark"] .hours-list li,
+html[data-theme="dark"] .faq-item p,
+html[data-theme="dark"] .prevention-hero p,
+html[data-theme="dark"] .tip-card p,
+html[data-theme="dark"] .disease-card p,
+html[data-theme="dark"] .disease-card li,
+html[data-theme="dark"] .advice-list li,
+html[data-theme="dark"] .categories-list li,
+html[data-theme="dark"] .conseil-hero p:not(.conseil-eyebrow),
+html[data-theme="dark"] .conseil-article p,
+html[data-theme="dark"] .dashboard-card p,
+html[data-theme="dark"] .card-content,
+html[data-theme="dark"] .appointment-info p {
+    color: var(--dark-muted);
+}
+
+html[data-theme="dark"] .service-card > h2,
+html[data-theme="dark"] .contact-form-section h2,
+html[data-theme="dark"] .contact-info-section h2,
+html[data-theme="dark"] .faq-section h2 {
+    color: var(--topic-green);
+}
+
+html[data-theme="dark"] .btn,
+html[data-theme="dark"] .btn:hover,
+html[data-theme="dark"] .btn:focus-visible,
+html[data-theme="dark"] .btn-submit,
+html[data-theme="dark"] .btn-submit:hover,
+html[data-theme="dark"] .btn-search,
+html[data-theme="dark"] .btn-search:hover,
+html[data-theme="dark"] .btn-small,
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] button[type="submit"],
+html[data-theme="dark"] .new-appointment-btn .btn,
+html[data-theme="dark"] .nav-link.active,
+html[data-theme="dark"] .tab-btn.active {
+    color: var(--dark-background);
+}
+
+html[data-theme="dark"] .btn,
+html[data-theme="dark"] .btn-submit,
+html[data-theme="dark"] .btn-search,
+html[data-theme="dark"] .btn-small,
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] button[type="submit"],
+html[data-theme="dark"] .new-appointment-btn .btn {
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+}
+
+html[data-theme="dark"] .btn:hover,
+html[data-theme="dark"] .btn-submit:hover,
+html[data-theme="dark"] .btn-search:hover,
+html[data-theme="dark"] .btn-small:hover,
+html[data-theme="dark"] .btn-primary:hover,
+html[data-theme="dark"] button[type="submit"]:hover,
+html[data-theme="dark"] .new-appointment-btn .btn:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] .btn-secondary:hover {
+    color: var(--dark-text);
+}
+
+html[data-theme="dark"] .topic-cta .btn,
+html[data-theme="dark"] .cta-section .btn {
+    color: var(--dark-background);
+    background-color: #F2F5F2;
+    border-color: #F2F5F2;
+}
+
+html[data-theme="dark"] .topic-cta .btn:hover,
+html[data-theme="dark"] .cta-section .btn:hover {
+    color: var(--dark-text);
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+}
+
+html[data-theme="dark"] .btn-primary:hover {
+    color: var(--dark-background);
+}
+
+html[data-theme="dark"] a:not(.btn):not(.theme-toggle):not(.navi a):not(.nav-link):not(.social-links a):not(.conseil-navigation a) {
+    color: #62c984;
+}
+
+html[data-theme="dark"] a:not(.btn):not(.theme-toggle):not(.navi a):not(.nav-link):not(.social-links a):not(.conseil-navigation a):hover {
+    color: #91e3aa;
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .contact-form input,
+html[data-theme="dark"] .contact-form select,
+html[data-theme="dark"] .contact-form textarea,
+html[data-theme="dark"] .search-form input {
+    color: var(--dark-text);
+    background-color: var(--dark-background);
+    border-color: #496251;
+}
+
+html[data-theme="dark"] .form-group input::placeholder,
+html[data-theme="dark"] .contact-form input::placeholder,
+html[data-theme="dark"] .contact-form textarea::placeholder,
+html[data-theme="dark"] .search-form input::placeholder {
+    color: var(--dark-muted);
+}
+
+html[data-theme="dark"] .contact-form-note,
+html[data-theme="dark"] .recent-message {
+    background: #1a3022;
+    color: var(--dark-text);
+}
+
+html[data-theme="dark"] .dashboard-content,
+html[data-theme="dark"] .dashboard-main {
+    color: var(--dark-text);
+    background-color: var(--dark-background);
+}
+
+html[data-theme="dark"] .user-profile h3,
+html[data-theme="dark"] .nav-link,
+html[data-theme="dark"] .health-metric span,
+html[data-theme="dark"] .appointment-time,
+html[data-theme="dark"] .appointment-doctor,
+html[data-theme="dark"] .appointment-service,
+html[data-theme="dark"] .preview,
+html[data-theme="dark"] .reminders-list li {
+    color: var(--dark-muted);
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .recent-message {
+    background-color: #1a3022;
+}
+
+html[data-theme="dark"] .search-empty {
+    color: var(--dark-muted);
+    background: var(--dark-surface);
+}
+
+html[data-theme="dark"] .conseil-navigation {
+    background: var(--dark-surface);
+    border-color: #2d4435;
+}
+
+html[data-theme="dark"] .conseil-navigation a {
+    color: var(--dark-text);
+    background: #1a3022;
+}
+
+html[data-theme="dark"] .conseil-navigation a:hover,
+html[data-theme="dark"] .conseil-navigation a:focus-visible {
+    color: var(--dark-background);
+    background: var(--button-bg);
+}
+
+html[data-theme="dark"] footer {
+    color: var(--dark-text);
+    background-color: #08110c;
+}
+
+html[data-theme="dark"] .alert-success {
+    color: #bde8c9;
+    background-color: #173b27;
+    border-color: #2b6240;
+}
+
+html[data-theme="dark"] .alert-error {
+    color: #ffd1d1;
+    background-color: #482323;
+    border-color: #713737;
+}
+
+.reveal {
+    opacity: 0;
+}
+
+.reveal.is-visible {
+    animation-duration: 680ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+
+body[data-page="index"] .reveal.is-visible,
+body[data-page="inscription"] .reveal.is-visible {
+    animation-name: reveal-rise;
+}
+
+body[data-page="services"] .reveal.is-visible,
+body[data-page="pediatrie"] .reveal.is-visible {
+    animation-name: reveal-left;
+}
+
+body[data-page="prevention"] .reveal.is-visible,
+body[data-page="vaccination"] .reveal.is-visible {
+    animation-name: reveal-right;
+}
+
+body[data-page="contact"] .reveal.is-visible,
+body[data-page="pharmacie"] .reveal.is-visible {
+    animation-name: reveal-scale;
+}
+
+body[data-page="abonne"] .reveal.is-visible,
+body[data-page="maternite"] .reveal.is-visible {
+    animation-name: reveal-soft;
+}
+
+body[data-page="conseils"] .reveal.is-visible,
+body[data-page="consultation"] .reveal.is-visible {
+    animation-name: reveal-tilt;
+}
+
+body[data-page="dashboard"] .reveal.is-visible {
+    animation-name: reveal-dashboard;
+}
+
+@keyframes reveal-rise {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-left {
+    from { opacity: 0; transform: translateX(-32px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-right {
+    from { opacity: 0; transform: translateX(32px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-scale {
+    from { opacity: 0; transform: scale(0.94); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes reveal-soft {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes reveal-tilt {
+    from { opacity: 0; transform: perspective(700px) rotateX(5deg) translateY(18px); }
+    to { opacity: 1; transform: perspective(700px) rotateX(0) translateY(0); }
+}
+
+@keyframes reveal-dashboard {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .navi {
+        justify-content: center;
+    }
+}

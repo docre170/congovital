@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prévention - CongoVital</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/prevention.css">
+    <link rel="stylesheet" href="../css/site-ui.css">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
             <ul>
                 <li><a href="../../index.html">Accueil</a></li>
                 <li><a href="./services.html">Services</a></li>
-                <li><a href="./prevention.html">Prévention</a></li>
+                <li><a href="./prevention.html" aria-current="page">Prévention</a></li>
                 <li><a href="./contact.html">Contact</a></li>
                 <li><a href="./abonne.html">Abonné</a></li>
             </ul>
@@ -33,64 +35,84 @@
             <div class="hero-content">
                 <h1>Votre Guide de Santé</h1>
                 <p>Découvrez nos conseils et ressources pour une meilleure prévention sanitaire</p>
-                <form class="search-form" action="">
-                    <input type="text" placeholder="Rechercher un conseil de santé..." required>
+                <form class="search-form" action="#prevention-tips" role="search">
+                    <label class="visually-hidden" for="prevention-search">Rechercher un conseil de santé</label>
+                    <input type="search" id="prevention-search" name="q"
+                        aria-controls="tips-grid"
+                        placeholder="Ex. hydratation, sommeil, alimentation">
                     <button type="submit" class="btn-search">Rechercher</button>
                 </form>
             </div>
             <div class="hero-image">
-                <img src="../../photos/infirmiere.jpg" alt="Infirmière - Prévention sanitaire">
+                <img src="../../photos/infirmiere.jpg" alt="Infirmière - Prévention sanitaire"
+                    width="501" height="626" fetchpriority="high">
             </div>
         </section>
 
         <!-- Section Conseils de Prévention -->
-        <section class="prevention-tips">
+        <section class="prevention-tips" id="prevention-tips">
             <h2>Conseils de Prévention Essentiels</h2>
-            <div class="tips-grid">
-                <article class="tip-card">
-                    <div class="tip-icon"><img src="" alt="eau"></div>
-                    <h3>Hydratation</h3>
-                    <p>Buvez au moins 8 verres d'eau par jour pour maintenir votre équilibre hydrique et soutenir vos
-                        fonctions corporelles.</p>
-                    <a href="#" class="btn">En savoir plus</a>
+            <p class="search-results" id="search-results" aria-live="polite" aria-atomic="true"></p>
+            <p class="search-empty" id="search-empty" hidden>Aucun conseil ne correspond à votre recherche.</p>
+            <div class="tips-grid" id="tips-grid">
+                <article class="tip-card" data-search-terms="boire eau hydratation chaleur">
+                    <img class="tip-image" src="../images/conseils/hydratation.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                    <div class="tip-card-content">
+                        <div class="tip-icon"><i class="fa-solid fa-glass-water" aria-hidden="true"></i></div>
+                        <h3>Hydratation</h3>
+                        <p>Buvez régulièrement et adaptez vos apports à la chaleur, à votre activité et aux conseils de votre professionnel de santé.</p>
+                        <a href="./conseils.html#hydratation" class="btn">Lire le conseil</a>
+                    </div>
                 </article>
 
-                <article class="tip-card">
-                    <div class="tip-icon"><img src="" alt="som"></div>
-                    <h3>Sommeil Régulier</h3>
-                    <p>Dormez 7 à 8 heures chaque nuit pour permettre à votre corps de se régénérer et renforcer votre
-                        système immunitaire.</p>
-                    <a href="#" class="btn">En savoir plus</a>
+                <article class="tip-card" data-search-terms="repos dormir nuit sommeil régulier">
+                    <img class="tip-image" src="../images/conseils/sommeil.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                    <div class="tip-card-content">
+                        <div class="tip-icon"><i class="fa-solid fa-bed" aria-hidden="true"></i></div>
+                        <h3>Sommeil Régulier</h3>
+                        <p>Des horaires réguliers et un environnement calme favorisent un sommeil réparateur.</p>
+                        <a href="./conseils.html#sommeil" class="btn">Lire le conseil</a>
+                    </div>
                 </article>
 
-                <article class="tip-card">
-                    <div class="tip-icon"><img src="" alt="course"></div>
-                    <h3>Activité Physique</h3>
-                    <p>Pratiquez au moins 30 minutes d'exercice quotidien pour améliorer votre santé cardiovasculaire et
-                        mentale.</p>
-                    <a href="#" class="btn">En savoir plus</a>
+                <article class="tip-card" data-search-terms="sport bouger marche exercice activité physique">
+                    <img class="tip-image" src="../images/conseils/activite.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                    <div class="tip-card-content">
+                        <div class="tip-icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></div>
+                        <h3>Activité Physique</h3>
+                        <p>Choisissez une activité adaptée à vos capacités et bougez régulièrement, à votre rythme.</p>
+                        <a href="./conseils.html#activite" class="btn">Lire le conseil</a>
+                    </div>
                 </article>
 
-                <article class="tip-card">
-                    <div class="tip-icon"><img src="" alt="alim"></div>
-                    <h3>Alimentation Saine</h3>
-                    <p>Adoptez une alimentation équilibrée riche en fruits, légumes et protéines pour renforcer votre
-                        santé.</p>
-                    <a href="#" class="btn">En savoir plus</a>
+                <article class="tip-card" data-search-terms="repas fruits légumes nutrition alimentation saine équilibrée">
+                    <img class="tip-image" src="../images/conseils/alimentation.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                    <div class="tip-card-content">
+                        <div class="tip-icon"><i class="fa-solid fa-apple-whole" aria-hidden="true"></i></div>
+                        <h3>Alimentation Saine</h3>
+                        <p>Variez les aliments et privilégiez, selon les disponibilités, les fruits, les légumes et les repas équilibrés.</p>
+                        <a href="./conseils.html#alimentation" class="btn">Lire le conseil</a>
+                    </div>
                 </article>
 
-                <article class="tip-card">
-                    <div class="tip-icon"><img src="" alt=""></div>
-                    <h3>Hygiène Personnelle</h3>
-                    <p>Lavez régulièrement vos mains et maintenez une bonne hygiène pour prévenir les infections.</p>
-                    <a href="#" class="btn">En savoir plus</a>
+                <article class="tip-card" data-search-terms="laver mains propre lavage savon hygiène personnelle">
+                    <img class="tip-image" src="../images/conseils/hygiene.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                    <div class="tip-card-content">
+                        <div class="tip-icon"><i class="fa-solid fa-hands-bubbles" aria-hidden="true"></i></div>
+                        <h3>Hygiène Personnelle</h3>
+                        <p>Lavez-vous les mains à l’eau et au savon, notamment avant de préparer ou de prendre un repas.</p>
+                        <a href="./conseils.html#hygiene" class="btn">Lire le conseil</a>
+                    </div>
                 </article>
 
-                <article class="tip-card">
-                    <div class="tip-icon"></div>
-                    <h3>Consultations Régulières</h3>
-                    <p>Consultez régulièrement votre médecin pour un suivi médical et des dépistages préventifs.</p>
-                    <a href="#" class="btn">En savoir plus</a>
+                <article class="tip-card" data-search-terms="médecin rendez-vous bilan dépistage consultation suivi médical">
+                    <img class="tip-image" src="../images/conseils/consultation.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                    <div class="tip-card-content">
+                        <div class="tip-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
+                        <h3>Consultations Régulières</h3>
+                        <p>Un professionnel de santé peut vous conseiller sur le suivi et les examens préventifs adaptés à votre situation.</p>
+                        <a href="./conseils.html#consultation" class="btn">Lire le conseil</a>
+                    </div>
                 </article>
             </div>
         </section>        
@@ -99,11 +121,11 @@
             <div class="advice-sidebar">
                 <h3>Conseils du Jour</h3>
                 <ul class="advice-list">
-                    <li>✓ Buvez beaucoup d'eau tout au long de la journée</li>
-                    <li>✓ Dormez 8 heures de nuit pour une meilleure récupération</li>
-                    <li>✓ Consultez régulièrement votre bilan de santé</li>
-                    <li>✓ Pratiquez une activité physique adaptée</li>
-                    <li>✓ Maintenez une alimentation équilibrée</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Buvez de l'eau tout au long de la journée</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Dormez suffisamment pour une meilleure récupération</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Consultez régulièrement pour votre bilan de santé</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Pratiquez une activité physique adaptée</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Maintenez une alimentation équilibrée</li>
                 </ul>
             </div>
 
@@ -111,12 +133,12 @@
                 <h3>Catégories Populaires</h3>
                 <nav>
                     <ul class="categories-list">
-                        <li><a href="./services.html">Vaccination</a></li>
+                        <li><a href="./vaccination.html">Vaccination</a></li>
                         <li><a href="./services.html">Maladies virales</a></li>
                         <li><a href="./services.html">Maladies tropicales</a></li>
                         <li><a href="./services.html">Santé mentale</a></li>
-                        <li><a href="./services.html">Nutrition</a></li>
-                        <li><a href="./services.html">Hygiène</a></li>
+                        <li><a href="./conseils.html#alimentation">Nutrition</a></li>
+                        <li><a href="./conseils.html#hygiene">Hygiène</a></li>
                     </ul>
                 </nav>
             </div>
@@ -140,6 +162,8 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/prevention.js" defer></script>
+    <script src="../js/site-ui.js"></script>
 </body>
 
 </html>

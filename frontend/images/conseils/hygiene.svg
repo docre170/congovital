@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Illustration du lavage des mains</title>
+  <rect width="640" height="360" fill="#e9f3f4"/>
+  <circle cx="516" cy="68" r="88" fill="#d6e9e9"/>
+  <path d="M294 76v48h91V76" fill="none" stroke="#527c82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M340 130c-18 24-26 39-26 51a26 26 0 0 0 52 0c0-12-8-27-26-51Z" fill="#73c1d1"/>
+  <path d="M163 229c24-35 48-56 65-56 13 0 17 12 11 23l-16 25c26-22 51-34 67-29 12 4 13 17 2 27 29-13 49-14 59-5 10 10 5 21-9 29 25-5 44 0 49 12 7 16-11 27-32 39-48 28-91 41-139 34-42-6-66-34-57-99Z" fill="#fff" stroke="#286b73" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M231 223c17-12 35-23 51-30m-31 48c20-15 42-27 61-33m-34 51c22-14 44-23 62-27" fill="none" stroke="#86bfc3" stroke-width="9" stroke-linecap="round"/>
+  <path d="M464 143c-12 16-17 26-17 35a17 17 0 0 0 34 0c0-9-5-19-17-35Z" fill="#73c1d1"/>
+</svg>

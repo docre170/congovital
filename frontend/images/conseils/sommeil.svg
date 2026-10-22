@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Illustration d’un lit et de la lune</title>
+  <rect width="640" height="360" fill="#eaf0f7"/>
+  <circle cx="520" cy="72" r="92" fill="#dce6f1"/>
+  <path d="M390 102a73 73 0 1 0 91 91 82 82 0 1 1-91-91Z" fill="#567b9f"/>
+  <path d="m185 86 9 22 22 9-22 9-9 22-9-22-22-9 22-9 9-22Zm170 37 6 14 14 6-14 6-6 14-6-14-14-6 14-6 6-14Z" fill="#7c9dbb"/>
+  <path d="M108 236h424v65H108z" rx="12" fill="#fff" stroke="#456b8c" stroke-width="10"/>
+  <path d="M130 208h115a35 35 0 0 1 35 35v20H130z" fill="#b9cee0"/>
+  <path d="M108 299v30m424-30v30" stroke="#456b8c" stroke-width="14" stroke-linecap="round"/>
+</svg>

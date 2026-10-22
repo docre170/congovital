@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Illustration d’un repas équilibré</title>
+  <rect width="640" height="360" fill="#f4f1e8"/>
+  <circle cx="520" cy="62" r="86" fill="#e9e3d3"/>
+  <circle cx="320" cy="190" r="119" fill="#fff" stroke="#d8d1c2" stroke-width="12"/>
+  <path d="M320 75a115 115 0 0 1 115 115H320V75Z" fill="#7ebc8a"/>
+  <path d="M435 190a115 115 0 0 1-115 115V190h115Z" fill="#e3bd66"/>
+  <path d="M320 305a115 115 0 0 1-115-115h115v115Z" fill="#c9d991"/>
+  <path d="M205 190A115 115 0 0 1 320 75v115H205Z" fill="#df916f"/>
+  <circle cx="320" cy="190" r="39" fill="#f6e8cc"/>
+  <path d="M475 231c-34-27-64-30-89-10 13 37 46 54 82 42 13-4 21-15 7-32Z" fill="#73a765"/>
+  <path d="M435 212c8-18 20-28 39-32" fill="none" stroke="#547d48" stroke-width="8" stroke-linecap="round"/>
+</svg>
